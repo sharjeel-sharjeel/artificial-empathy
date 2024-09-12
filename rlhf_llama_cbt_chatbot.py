@@ -18,8 +18,8 @@ import transformers
 # accelerator = Accelerator(fsdp_plugin=fsdp_plugin)
 
 # Load and prepare both datasets
-supervised_dataset = load_dataset('json', data_files='Train_Text/reformatted_text_file_json_object_format.jsonl', split='train')
-rl_dataset = load_dataset('json', data_files='Train_Text/RLHF_Data/Semi_Supervised_and_Self_Labelled_RLHS.jsonl', split='train')
+supervised_dataset = load_dataset('json', data_files='supervised_data.jsonl', split='train')
+rl_dataset = load_dataset('json', data_files='Self_Labelled_data.jsonl', split='train')
 
 max_length = 256
 
